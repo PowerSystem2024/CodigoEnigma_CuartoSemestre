@@ -1,13 +1,4 @@
-const attacks = ['Puño', 'Patada', 'Barrida'];
-const characters = ['Zuko', 'Katara', 'Aang', 'Toph'];
-const beats = {'Puño': 'Barrida', 'Patada': 'Puño', 'Barrida': 'Patada'};
-const imgByCharacter = {
-    'Zuko': 'https://static.wikia.nocookie.net/avatar/images/4/4b/Zuko.png',
-    'Katara': 'https://static1.srcdn.com/wordpress/wp-content/uploads/2020/09/Katara-3-Cropped.jpg',
-    'Aang': 'https://sm.ign.com/ign_pk/cover/a/avatar-gen/avatar-generations_rpge.jpg',
-    'Toph': 'https://i.pinimg.com/736x/4e/00/11/4e00111c746f99e1a41374cf8ebb77c7.jpg'
-}
-
+// Variables de elementos
 const elAttacksContainer = document.getElementById('attacks-container');
 const elShowRulesButton = document.getElementById('show-rules');
 const elRulesContainer = document.getElementById('rules-container');
@@ -26,10 +17,23 @@ const elPlayerFloatingText = document.getElementById('player-floating-text');
 const elEnemyFloatingText = document.getElementById('enemy-floating-text');
 const elAttackTitle = document.getElementById('attack-title');
 
+// Datos fijos
+const attacks = ['Puño', 'Patada', 'Barrida'];
+const characters = ['Zuko', 'Katara', 'Aang', 'Toph'];
+const beats = {'Puño': 'Barrida', 'Patada': 'Puño', 'Barrida': 'Patada'};
+const imgByCharacter = {
+    'Zuko': 'https://static.wikia.nocookie.net/avatar/images/4/4b/Zuko.png',
+    'Katara': 'https://static1.srcdn.com/wordpress/wp-content/uploads/2020/09/Katara-3-Cropped.jpg',
+    'Aang': 'https://sm.ign.com/ign_pk/cover/a/avatar-gen/avatar-generations_rpge.jpg',
+    'Toph': 'https://i.pinimg.com/736x/4e/00/11/4e00111c746f99e1a41374cf8ebb77c7.jpg'
+}
+
+// Flags y acumulador de vida
 var selectedCharacter = null;
 var rulesVisible = false;
 var healthPointsByCharacter = { 'player': 3, 'enemy': 3 };
 
+// Init que crea botones segun el array de ataques
 attacks.forEach(attack => {
     var button = document.createElement('button');
     button.id = 'boton-' + attack;
