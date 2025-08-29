@@ -4,7 +4,7 @@
 
 Los colores no son solo elementos estéticos; son herramientas poderosas de comunicación que influyen directamente en las emociones y decisiones de los usuarios.
 
-*[Imagen: Infografía de psicología del color con ejemplos de marcas]*
+![Imagen: Infografía de psicología del color con ejemplos de marcas](img/9.%20PsicologiaColor.jpg)
 
 Como desarrolladores, comprender la psicología del color nos permite:
 - Transmitir mensajes específicos sin palabras
@@ -14,7 +14,7 @@ Como desarrolladores, comprender la psicología del color nos permite:
 
 ### Significados y Emociones por Color
 
-*[Imagen: Rueda de color con asociaciones emocionales]*
+![Imagen: Rueda de color con asociaciones emocionales](img/14.%20Infografia.png)
 
 **Colores Cálidos:**
 - **Rojo**: Pasión, energía, urgencia, poder. Ideal para llamadas a la acción y notificaciones importantes
@@ -33,7 +33,7 @@ Como desarrolladores, comprender la psicología del color nos permite:
 
 ### Aplicación en Marcas Reconocidas
 
-*[Imagen: Ejemplos de marcas usando diferentes colores estratégicamente]*
+![Imagen: Ejemplos de marcas usando diferentes colores estratégicamente](img/10.%20Masinfo.jpg)
 
 Observa cómo marcas exitosas aplican estos principios:
 - **Facebook, LinkedIn**: Azul para transmitir confianza
@@ -44,7 +44,7 @@ Observa cómo marcas exitosas aplican estos principios:
 
 ### Modelos de Color Digital
 
-*[Imagen: Comparación entre RGB y hexadecimales]*
+![Imagen: Comparación entre RGB y hexadecimales](img/12.%20Colors.png)
 
 Como desarrolladores, trabajamos principalmente con:
 - **RGB**: Para pantallas (Red, Green, Blue)
@@ -53,7 +53,7 @@ Como desarrolladores, trabajamos principalmente con:
 
 ### Armonías de Color
 
-*[Imagen: Círculo cromático con diferentes tipos de armonías]*
+![Imagen: Círculo cromático con diferentes tipos de armonías](img/8.%20TeoriaColor.png)
 
 **Tipos de combinaciones:**
 - **Monocromática**: Diferentes tonos del mismo color
@@ -63,7 +63,7 @@ Como desarrolladores, trabajamos principalmente con:
 
 ### Paletas de Color Efectivas
 
-*[Imagen: Ejemplos de paletas de color para diferentes tipos de aplicaciones]*
+![Imagen: Ejemplos de paletas de color para diferentes tipos de aplicaciones](img/14.%20Infografia.png)
 
 Una paleta efectiva debe incluir:
 - **Color primario**: Identidad de la marca
@@ -75,7 +75,7 @@ Una paleta efectiva debe incluir:
 
 ### ¿Qué es UX?
 
-*[Imagen: Diagrama del proceso UX]*
+![Imagen: Diagrama del proceso UX](img/1.%20UX.png)
 
 UX es el diseño centrado en el usuario y su experiencia completa con nuestro producto. No se trata solo de cómo se ve, sino de cómo funciona y se siente.
 
@@ -87,7 +87,7 @@ UX es el diseño centrado en el usuario y su experiencia completa con nuestro pr
 
 ### Arquitectura de la Información
 
-*[Imagen: Ejemplo de sitemap de una aplicación de delivery]*
+![Imagen: Ejemplo de sitemap de una aplicación de delivery](img/11.%20PsicoColor.png)
 
 La arquitectura de la información organiza el contenido de manera lógica y findable:
 
@@ -98,7 +98,7 @@ La arquitectura de la información organiza el contenido de manera lógica y fin
 
 ### Flujos de Usuario (User Flows)
 
-*[Imagen: Diagrama de flujo para proceso de compra online]*
+![Imagen: Diagrama de flujo para proceso de compra online](img/2.%20Wireframes.png)
 
 Los flujos mapean el camino que sigue un usuario para completar una tarea:
 
@@ -110,7 +110,7 @@ Los flujos mapean el camino que sigue un usuario para completar una tarea:
 
 ### Wireframes: Del Concepto a la Estructura
 
-*[Imagen: Evolución de wireframes de baja a alta fidelidad]*
+![Imagen: Evolución de wireframes de baja a alta fidelidad](img/3.%20Wireframes.png)
 
 Los wireframes son esquemas que definen la estructura sin distraerse con el diseño visual:
 
@@ -121,7 +121,7 @@ Los wireframes son esquemas que definen la estructura sin distraerse con el dise
 
 ### UX vs UI: La Diferencia Fundamental
 
-*[Imagen: Diagrama comparativo UX vs UI]*
+![Imagen: Diagrama comparativo UX vs UI](img/6.%20UI_UX.png)
 
 **UX (User Experience):**
 - Se enfoca en la investigación y estrategia
@@ -137,7 +137,7 @@ Los wireframes son esquemas que definen la estructura sin distraerse con el dise
 
 ### Moodboards: Definiendo la Dirección Visual
 
-*[Imagen: Ejemplo de moodboard para una aplicación]*
+![Imagen: Ejemplo de moodboard para una aplicación](img/7.%20Moodboard.png)
 
 Un moodboard es una colección de referencias visuales que establece la dirección estética del proyecto:
 
@@ -152,7 +152,7 @@ Un moodboard es una colección de referencias visuales que establece la direcci�
 
 ### Accesibilidad en el Diseño
 
-*[Imagen: Ejemplos de contrastes de color y su accesibilidad]*
+![Imagen: Ejemplos de contrastes de color y su accesibilidad](img/8.%20TeoriaColor.png)
 
 La accesibilidad no es opcional, es fundamental:
 
@@ -164,7 +164,7 @@ La accesibilidad no es opcional, es fundamental:
 
 ### Testing y Validación
 
-*[Imagen: Usuario realizando pruebas de usabilidad]*
+![Imagen: Usuario realizando pruebas de usabilidad](img/9.%20PsicologiaColor.jpg)
 
 Las decisiones de diseño deben validarse con usuarios reales:
 
