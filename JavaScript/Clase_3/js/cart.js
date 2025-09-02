@@ -85,8 +85,14 @@ modalFooter.innerHTML = `
 
 cartBtn.addEventListener("click", displayCart);
 
+// Close modal when clicking on overlay
+modalOverlay.addEventListener("click", () => {
+    modalContainer.style.display = "none";
+    modalOverlay.style.display = "none";
+});
+
 const deleteCartProduct = (id) => {
-  const foundId = cart.findIndex((element) => element.id === product.id);
+  const foundId = cart.findIndex((element) => element.id === id);
   cart.splice(foundId, 1);
-  displayCart()
+  displayCart();
 };

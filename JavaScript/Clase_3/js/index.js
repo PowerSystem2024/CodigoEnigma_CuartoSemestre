@@ -25,14 +25,15 @@ productos.forEach((product) =>{
                 }
             });
         } else {
-        cart.push({
-            id:product.id,
-            productName: product.productName,
-            price: product.price,
-            quanty: product.quanty,
-            img: product.img,
-        })
-        console.log(cart)
-    }
-    })
+            cart.push({
+                id: product.id,
+                productName: product.productName,
+                price: product.price,
+                quanty: product.quanty,
+                img: product.img,
+            });
+        }
+        console.log(cart);
+        displayCart();
+    });
 });
