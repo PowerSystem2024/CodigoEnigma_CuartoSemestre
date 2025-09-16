@@ -12,13 +12,27 @@ public class EstudianteServicio implements IEstudianteServicio{
     @Autowired
     private EstudianteRepositorio estudianteRepositorio;
 
+<<<<<<< HEAD
+    // Clase 4: Recuperar todos los objetos de tipo estudiante para hacer un return y obtener la lista cuando se solicite
+=======
 
+>>>>>>> development
     @Override
     public List<Estudiantes2025> listarEstudiantes() {
         List<Estudiantes2025> estudiantes = estudianteRepositorio.findAll();
         return estudiantes;
     }
 
+<<<<<<< HEAD
+    // Clase 4: Metodo para buscar estudiante por id
+    @Override
+    public Estudiantes2025 buscarEstudiantePorId(Integer idEstudiantes2025) {
+        Estudiantes2025 estudiante = estudianteRepositorio.findById(idEstudiantes2025).orElse(null);
+        return estudiante;
+    }
+
+    // Clase 4: Metodos para guardar y eliminar estudiante
+=======
 
     @Override
     public Estudiantes2025 buscarEstudiantePorId(Integer idEstudiante) {
@@ -27,6 +41,7 @@ public class EstudianteServicio implements IEstudianteServicio{
     }
 
 
+>>>>>>> development
     @Override
     public void guardarEstudiante(Estudiantes2025 estudiante) {
         estudianteRepositorio.save(estudiante);

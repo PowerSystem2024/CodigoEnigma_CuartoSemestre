@@ -19,6 +19,7 @@ public class EstudiantesApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
         logger.info("Iniciando la aplicación");
+        //Levantar la fabrica de Spring
         SpringApplication.run(EstudiantesApplication.class, args);
         logger.info("Aplicación finalizada");
     }
