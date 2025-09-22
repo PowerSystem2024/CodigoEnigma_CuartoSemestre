@@ -10,7 +10,7 @@ Somos un equipo de estudiantes de la **Universidad Tecnológica Nacional San Raf
 - Dicalbo, Juan Cruz
 - Dominguez, Eliana
 - Elias, Francisco
-- Ramos, Dilan
+- Huamán Ramos, Dilan
 - Rojas, Arón
 - Philama, Guardini
 
