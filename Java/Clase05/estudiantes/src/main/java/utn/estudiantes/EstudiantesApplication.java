@@ -12,10 +12,7 @@ import utn.estudiantes.servicio.EstudianteServicio;
 import java.util.List;
 import java.util.Scanner;
 
-<<<<<<< HEAD
 // Clase 45: Implementar Menu y ejecturarOpciones
-=======
->>>>>>> development
 @SpringBootApplication
 public class EstudiantesApplication implements CommandLineRunner {
     @Autowired
@@ -26,10 +23,7 @@ public class EstudiantesApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
         logger.info("Iniciando la aplicación");
-<<<<<<< HEAD
         //Levantar la fabrica de Spring
-=======
->>>>>>> development
         SpringApplication.run(EstudiantesApplication.class, args);
         logger.info("Aplicación finalizada");
     }
@@ -43,7 +37,6 @@ public class EstudiantesApplication implements CommandLineRunner {
             mostrarMenu();
             salir = ejecutarOpciones(consola);
             logger.info(nl);
-<<<<<<< HEAD
         }//Fin ciclo while
     }
         private void mostrarMenu(){
@@ -80,72 +73,6 @@ public class EstudiantesApplication implements CommandLineRunner {
                 }
                 case 3 -> {//Agregar estudiante
                     logger.info("Agregar estudiante: "+nl);
-=======
-        }
-    }
-
-    // Clase 5 creación de menú
-    private void mostrarMenu(){
-        logger.info(nl);
-        logger.info(nl+"""
-                *** Sistema de Estudiantes ***
-                1. Listar Estudiantes.
-                2. Buscar Estudiantes.
-                3. Agregar Estudiantes.
-                4. Modificar Estudiantes.
-                5. Eliminar Estudiantes.
-                6. Salir.
-                Elija una opción:""");
-    }
-
-    // Clase 5 metodo opciones
-    private boolean ejecutarOpciones(Scanner consola){
-        var opcion = Integer.parseInt(consola.nextLine());
-        var salir = false;
-        switch (opcion){
-            case 1 -> {
-                logger.info(nl+"Listado de estudiantes: "+nl);
-                List<Estudiantes2025> estudiantes = estudianteServicio.listarEstudiantes();
-                estudiantes.forEach((estudiante -> logger.info(estudiante.toString()+nl)));
-            }
-            case 2 -> {
-                logger.info("Ingrese el ID del estudiante a buscar: ");
-                var idEstudiante = Integer.parseInt(consola.nextLine());
-                Estudiantes2025 estudiante =
-                        estudianteServicio.buscarEstudiantePorId(idEstudiante);
-                if(estudiante != null)
-                    logger.info("Estudiante encontrado: "+estudiante + nl);
-                else
-                    logger.info("Estudiante no encontrado: "+ estudiante + nl);
-            }
-            case 3 -> {
-                logger.info("Agregar estudiante: "+nl);
-                logger.info("Nombre: ");
-                var nombre = consola.nextLine();
-                logger.info("Apellido: ");
-                var apellido = consola.nextLine();
-                logger.info("Telefono: ");
-                var telefono = consola.nextLine();
-                logger.info("Email: ");
-                var email = consola.nextLine();
-                // Crear el objeto estudiante sin el id
-                var estudiante = new Estudiantes2025();
-                estudiante.setNombre(nombre);
-                estudiante.setApellido(apellido);
-                estudiante.setTelefono(telefono);
-                estudiante.setEmail(email);
-                estudianteServicio.guardarEstudiante(estudiante);
-                logger.info("Estudiante agregado: "+estudiante+nl);
-            }
-            case 4 -> {
-                logger.info("Modificar estudiante: "+nl);
-                logger.info("Ingrese el ID estudiante: ");
-                var idEstudiante = Integer.parseInt(consola.nextLine());
-                // Buscar el estudiante a modificar
-                Estudiantes2025 estudiante =
-                        estudianteServicio.buscarEstudiantePorId(idEstudiante);
-                if(estudiante != null){
->>>>>>> development
                     logger.info("Nombre: ");
                     var nombre = consola.nextLine();
                     logger.info("Apellido: ");
@@ -154,17 +81,13 @@ public class EstudiantesApplication implements CommandLineRunner {
                     var telefono = consola.nextLine();
                     logger.info("Email: ");
                     var email = consola.nextLine();
-<<<<<<< HEAD
                     //Crear el objeto estudiante sin el id
                     var estudiante = new Estudiantes2025();
-=======
->>>>>>> development
                     estudiante.setNombre(nombre);
                     estudiante.setApellido(apellido);
                     estudiante.setTelefono(telefono);
                     estudiante.setEmail(email);
                     estudianteServicio.guardarEstudiante(estudiante);
-<<<<<<< HEAD
                     logger.info("Estudiante agregado: "+estudiante+nl);
                 }
                 case 4 -> {//Modificar estudiante
@@ -215,33 +138,6 @@ public class EstudiantesApplication implements CommandLineRunner {
             return salir;
         }//Fin metodo ejecutarOpciones
 
-=======
-                    logger.info("Estudiante modificado: "+estudiante+nl);
-                }
-                else
-                    logger.info("Estudiante no encontrado con el ID: "+ idEstudiante+nl);
-            }
-            case 5 -> {
-                logger.info("Eliminar estudiante: "+nl);
-                logger.info("Ingrese el ID estudiante: ");
-                var idEstudiante = Integer.parseInt(consola.nextLine());
-                // Buscar el id a eliminar
-                var estudiante = estudianteServicio.buscarEstudiantePorId(idEstudiante);
-                if(estudiante != null){
-                    estudianteServicio.eliminarEstudiante(estudiante);
-                    logger.info("Estudiante eliminado: "+estudiante+nl);
-                }
-                else
-                    logger.info("Estudiante no encontrado con el ID: "+estudiante+nl);
-            }
-            case 6 -> {
-                logger.info("Hasta pronto!"+nl+nl);
-                salir = true;
-            }
-        }
-        return salir;
-    }
->>>>>>> development
 }
 
 
@@ -253,10 +149,4 @@ public class EstudiantesApplication implements CommandLineRunner {
 ... también cambié la configuración
 -Ajustar lo que es Hibernate y JPA también en application.properties
 -Toda la parte de "Logging" dentro de application.properties es para limpiar la consola a la hora de ejecutar main
-<<<<<<< HEAD
  */
-=======
-
-- El WARNING que figura al ejecutar no es un error, es un aviso sobre seguridad indicando que IntelliJ está usando un metodo nativo que Java considera restringido, NO afecta al funcionamiento
- */
->>>>>>> development
