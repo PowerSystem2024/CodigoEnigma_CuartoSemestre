@@ -14,10 +14,11 @@ import lombok.ToString;
 @Data // Aqui se crean los getters and setters
 @NoArgsConstructor // Aqui se crea el constructor vacio
 @AllArgsConstructor // Aqui se crea el constructor con todos lo atributos
-@ToString // Aquí se crea el método ToString
+@ToString // Aquí se crea el metodo ToString
 public class Estudiantes2025 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //Revisar que esto coincida con tu base de datos!
     private Integer idestudiantes2025;
     private String nombre;
     private String apellido;
