@@ -2,14 +2,14 @@ const productos = [
     {
         id: 1,
         productName: "Banana",
-        price: 480,
+        price: 35,
         quanty: 1,
         img: "./media/banana.jpg",
     },
     {
         id: 2,
         productName: "Leche",
-        price: 950,
+        price: 250,
         quanty:1,
         img: "./media/leche.png",
     },
@@ -23,7 +23,7 @@ const productos = [
     {
         id: 4,
         productName: "Mayonesa",
-        price: 510,
+        price: 150,
         quanty: 1,
         img: "./media/mayonesa.png",
     },
