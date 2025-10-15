@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avatar - Batalla de Elementos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-img"></div>
+    <div id="finish" class="finish-text">
+        <div id="finish-text"></div>
+        <button onclick="resetGame()">Volver a Jugar</button>
+    </div>
+
+    <img class="logo" src="https://static.wikia.nocookie.net/pahlavireich/images/9/98/625-6257797_avatar-the-last-airbender-logo-transparent-avatar-the.png" alt="Logo Avatar">
+
+    <!-- Sección de selección de personaje -->
+  <div id="char-selector" class="section">
+    <h2>Elige tu Personaje</h2>
+    <div id="char-options">
+        <!-- Los personajes se cargarán dinámicamente aquí -->
+    </div>
+    <br><br>
+    <button onclick="selectCharacter()">Comenzar Batalla</button> <!-- Cambiado el texto -->
+  </div>
+
+    <!-- Sección para crear nuevo personaje -->
+    <div id="new-char-section" class="section">
+        <h3>Crear Nuevo Personaje</h3>
+        <input type="text" id="new-char-name" placeholder="Nombre del personaje"><br><br>
+        <button onclick="crearPersonaje()">Agregar Personaje</button>
+    </div>
+
+    <!-- Sección de batalla -->
+    <div class="section" id="attack-section" style="display: none;">
+        <h4 id="versus-text" style="margin-top: 0px;"></h4>
+       
+        <div class="battle-container">
+            <div class="character-contianer">
+                <img id="player" src="">
+                <span id="player-floating-text" class="floating-text">-1 Vida</span>
+                <p>Tu personaje tiene <span id="player-hp" style="color: red;">3</span> vidas</p>
+            </div>
+
+            <div class="vs-text">VS</div>
+
+            <div class="character-contianer">
+                <img id="enemy" src="">
+                <span id="enemy-floating-text" class="floating-text">-1 Vida</span>
+                <p>El enemigo tiene <span id="enemy-hp" style="color: red;">3</span> vidas</p>
+            </div>
+        </div>
+
+        <h2 id="attack-title">Elige tu ataque</h2>
+        <div id="attacks-container">
+            <!-- Los ataques se generarán dinámicamente -->
+        </div>
+        <div class="result scrollable" id="battle-result">
+            <!-- Aquí van los resultados de la pelea -->
+        </div>
+    </div>
+
+    <!-- Botón y sección de reglas -->
+    <div> 
+        <span id="show-rules" class="rules" onclick="showRules()">Mostrar Reglas</span>
+    </div>
+    <div id="rules-container" class="section" style="display: none;">
+        <h2 style="margin-top: 0px;">Reglas del Juego</h2>
+        <p>
+            Bienvenido al juego de los 4 Reinos. Primero, debes <strong>seleccionar un personaje</strong>. Una vez seleccionado, tendrás <strong>3 vidas</strong> para enfrentarte al enemigo.
+        </p>
+        <p>
+            El sistema de combate se basa en una mecánica similar a <em>Piedra, Papel o Tijera</em>, utilizando los siguientes ataques:
+        </p>
+        <ul>
+            <li><strong>Puño ✊</strong> le gana a <strong>Barrida 🦶</strong></li>
+            <li><strong>Barrida 🦶</strong> le gana a <strong>Patada 🦵</strong></li>
+            <li><strong>Patada 🦵</strong> le gana a <strong>Puño ✊</strong></li>
+        </ul>
+        <p>
+            Elegí sabiamente tus ataques para derrotar al enemigo antes de quedarte sin vidas. ¡Buena suerte!
+        </p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
