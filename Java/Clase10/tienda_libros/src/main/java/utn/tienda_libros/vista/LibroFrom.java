@@ -85,7 +85,7 @@ public class LibroFrom extends JFrame {
 
 
     private void agregarLibro(){
-        //LLeer los valores del formulario
+        //Leer los valores del formulario
         if(libroTexto.getText().equals("")){
             mostrarMensaje("Ingrese el nombre del libro");
             libroTexto.requestFocusInWindow();
