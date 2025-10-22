@@ -167,7 +167,7 @@ public class LibroFrom extends JFrame {
             listarLibros();
         }
         else{
-            mostrarMensaje("No se ha seleccionadoo ningun libro de la tabla a eliminar");
+            mostrarMensaje("No se ha seleccionado ningun libro de la tabla a eliminar");
         }
     }
 
