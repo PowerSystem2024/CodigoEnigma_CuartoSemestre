@@ -1,0 +1,141 @@
+/* --- RESET Y LAYOUT BÁSICO --- */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(to bottom, #011627, #022d42);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f9f9f9;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-x: hidden; /* evita scroll horizontal */
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin: 10px 0 15px;
+  color: #00ffff;
+  text-shadow: 2px 2px 5px #000;
+}
+
+/* --- CONTENEDORES --- */
+section {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #ffffff33;
+  border-radius: 12px;
+  padding: 14px;
+  margin: 6px 0;
+  width: 95%;
+  max-width: 480px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Reglas y ataque comparten comportamiento desplegable */
+.desplegable {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Para no tener que hacer scroll general */
+#reglas-juego ul,
+#contenedor-ataques {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+/* --- BOTONES --- */
+button {
+  background-color: #0066cc;
+  color: #fff;
+  padding: 8px 16px;
+  margin: 6px 4px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.25s;
+}
+
+button:hover:enabled {
+  background-color: #004999;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Botones de ataques grandes en móvil */
+#boton-punio, #boton-patada, #boton-barrida {
+  width: 100%;
+  margin: 6px 0;
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+/* --- RADIO Y LABELS --- */
+label {
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  margin-right: 6px;
+}
+
+/* --- VARIOS --- */
+#error-personaje { font-size: 0.9em; margin-top: 8px; }
+#resultado p { margin: 4px 0; font-weight: bold; }
+
+/* Reglas - título */
+#reglas-juego h2,
+#titulo-ataque { color: #00ffff; text-shadow: 1px 1px 4px #000; }
+
+/* Oculto reutilizable */
+.oculto { display: none; }
+
+/* Botón flotante de reinicio */
+.boton-flotante {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+.boton-flotante:hover {
+  background-color: #0097a7;
+}
+
+/* --- RESPONSIVE AJUSTES --- */
+@media (max-height: 650px) {
+  h1 { font-size: 1.6rem; }
+  section { padding: 10px; }
+  button { padding: 6px 12px; }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.8rem; }
+  section { padding: 12px; }
+  button { padding: 8px 14px; font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.4rem; }
+  section { padding: 8px; margin: 6px auto; }
+  button { padding: 10px; font-size: 1rem; max-width: 100%; }
+  label { display: block; margin: 6px 0; }
+  #reglas-juego ul, #contenedor-ataques { max-height: 200px; }
+}
