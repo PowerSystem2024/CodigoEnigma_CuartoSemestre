@@ -49,6 +49,7 @@ public class LibroFrom extends JFrame {
     }
 
     private void iniciarForma(){
+        createUIComponents();
         setContentPane(panel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(900, 700);
@@ -182,20 +183,77 @@ public class LibroFrom extends JFrame {
         JOptionPane.showMessageDialog(this, mensaje);
     }
 
-    //private void createUIComponents(){
-    //    idTexto.setVisible(false);
-    //    this.tablaModeloLibros = new DefaultTableModel(0, 5){
-    //        @Override
-    //        public boolean isCellEditable(int row, int column){
-    //            return false;
-    //        }
-    //    };
-    //    String[] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
-    //    this.tablaModeloLibros.setColumnIdentifiers(cabecera);
-    //    //Instanciar el objeto de JTable
-    //    this.tablaLibros = new JTable(tablaModeloLibros);
-    //    listarLibros();
-    //}
+    private void createUIComponents(){
+        // Crear el panel principal
+        panel = new JPanel();
+        panel.setLayout(new BorderLayout());
+        
+        // Crear el título
+        tiendaDeLibrosLabel = new JLabel("Tienda de Libros");
+        tiendaDeLibrosLabel.setFont(new Font("Arial", Font.BOLD, 28));
+        tiendaDeLibrosLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        panel.add(tiendaDeLibrosLabel, BorderLayout.NORTH);
+        
+        // Panel central con formulario y tabla
+        JPanel centralPanel = new JPanel(new BorderLayout());
+        
+        // Panel del formulario (izquierda)
+        JPanel formPanel = new JPanel(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(5, 5, 5, 5);
+        
+        // Campo oculto para ID
+        idTexto = new JTextField();
+        idTexto.setVisible(false);
+        
+        // Campos del formulario
+        gbc.gridx = 0; gbc.gridy = 0;
+        formPanel.add(new JLabel("Libro:"), gbc);
+        gbc.gridx = 1;
+        libroTexto = new JTextField(20);
+        formPanel.add(libroTexto, gbc);
+        
+        gbc.gridx = 0; gbc.gridy = 1;
+        formPanel.add(new JLabel("Autor:"), gbc);
+        gbc.gridx = 1;
+        autorTexto = new JTextField(20);
+        formPanel.add(autorTexto, gbc);
+        
+        gbc.gridx = 0; gbc.gridy = 2;
+        formPanel.add(new JLabel("Precio:"), gbc);
+        gbc.gridx = 1;
+        precioTexto = new JTextField(20);
+        formPanel.add(precioTexto, gbc);
+        
+        gbc.gridx = 0; gbc.gridy = 3;
+        formPanel.add(new JLabel("Existencias:"), gbc);
+        gbc.gridx = 1;
+        existenciasTexto = new JTextField(20);
+        formPanel.add(existenciasTexto, gbc);
+        
+        // Panel de botones
+        JPanel buttonPanel = new JPanel(new FlowLayout());
+        agregarButton = new JButton("Agregar");
+        modificarButton = new JButton("Modificar");
+        eliminarButton = new JButton("Eliminar");
+        
+        buttonPanel.add(agregarButton);
+        buttonPanel.add(modificarButton);
+        buttonPanel.add(eliminarButton);
+        
+        gbc.gridx = 0; gbc.gridy = 4; gbc.gridwidth = 2;
+        formPanel.add(buttonPanel, gbc);
+        
+        centralPanel.add(formPanel, BorderLayout.WEST);
+        
+        // Tabla (derecha)
+        tablaLibros = new JTable();
+        scrollPane1 = new JScrollPane(tablaLibros);
+        scrollPane1.setPreferredSize(new Dimension(500, 400));
+        centralPanel.add(scrollPane1, BorderLayout.CENTER);
+        
+        panel.add(centralPanel, BorderLayout.CENTER);
+    }
 
     private void listarLibros(){
         //Limpiar la tabla
