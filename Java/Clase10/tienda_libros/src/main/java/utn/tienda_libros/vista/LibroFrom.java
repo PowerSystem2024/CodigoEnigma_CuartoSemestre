@@ -86,7 +86,7 @@ public class LibroFrom extends JFrame {
 
 
     private void agregarLibro(){
-        //LLeer los valores del formulario
+        //Leer los valores del formulario
         if(libroTexto.getText().equals("")){
             mostrarMensaje("Ingrese el nombre del libro");
             libroTexto.requestFocusInWindow();
@@ -168,7 +168,7 @@ public class LibroFrom extends JFrame {
             listarLibros();
         }
         else{
-            mostrarMensaje("No se ha seleccionadoo ningun libro de la tabla a eliminar");
+            mostrarMensaje("No se ha seleccionado ningun libro de la tabla a eliminar");
         }
     }
 

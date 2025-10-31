@@ -1,0 +1,92 @@
+.card-products-container {
+    margin: 5vh auto;
+}
+
+.card-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px; /* más alto para respetar proporción */
+    overflow: hidden;
+    background: #f8f8f8; /* fondo neutro */
+}
+
+.image img {
+    height: 100%;
+    width: auto;
+    object-fit: contain; /* mantiene proporciones de la botella */
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.info {
+    padding: 20px;
+    text-align: center;
+}
+
+.info h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.info p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.tags span {
+    font-size: 0.8rem;
+    margin: 5px;
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.price {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.price button {
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #6c63ff, #836fff);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.price button:hover {
+    background: linear-gradient(135deg, #5848e5, #6c63ff);
+    transform: scale(1.05);
+}
+
