@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { Card } from '../components/ui'
+import { Card } from '../components/UI'
+
 function NotFound() {
   return (
     <div className='h-[calc(100vh-64px)] flex justify-center items-center flex-col'>
