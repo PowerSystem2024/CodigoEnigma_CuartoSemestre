@@ -34,7 +34,7 @@ function TareasPage() {
 
             {tareas.length === 0 ? (
                 <Card>
-                    <p className="text-gray-500">No hay tareas todavía. Crea una nueva tarea.</p>
+                    <p className="text-gray-500">Aun no hay tareas. Crea una nueva tarea.</p>
                 </Card>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -42,7 +42,7 @@ function TareasPage() {
                         <Card key={tarea.id} className="cursor-pointer hover:border-sky-500 transition-colors">
                             <div onClick={() => navigate(`/tareas/${tarea.id}`)}>
                                 <h3 className="text-xl font-bold mb-2">{tarea.titulo}</h3>
-                                <p className="text-gray-600 mb-4">{tarea.descripcion}</p>
+                                <p className="text-gray-400 mb-4">{tarea.descripcion}</p>
                             </div>
                             <div className="flex gap-2">
                                 <Button onClick={() => navigate(`/tareas/editar/${tarea.id}`)}>

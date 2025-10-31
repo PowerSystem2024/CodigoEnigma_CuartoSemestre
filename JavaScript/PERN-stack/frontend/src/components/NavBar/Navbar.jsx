@@ -10,7 +10,6 @@ function Navbar({ children }) {
     const { isAuth, signout, user } = useAuth();
 
     const handleNavClick = (e, path) => {
-        // Si la ruta contiene parámetros dinámicos
         if (path.includes(':id')) {
             e.preventDefault();
             const id = prompt('Ingresa el ID de la tarea:');
@@ -50,7 +49,7 @@ function Navbar({ children }) {
                             <li>
                                 <button
                                     onClick={signout}
-                                    className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded"
+                                    className="bg-zinc-900 hover:bg-white text-red-500 px-3 py-1 rounded"
                                 >
                                     Cerrar Sesión
                                 </button>

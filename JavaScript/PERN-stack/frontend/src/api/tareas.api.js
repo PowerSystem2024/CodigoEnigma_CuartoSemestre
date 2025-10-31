@@ -6,11 +6,7 @@ const API = axios.create({
 });
 
 export const obtenerTareas = () => API.get('/tareas');
-
 export const obtenerTarea = (id) => API.get(`/tareas/${id}`);
-
 export const crearTarea = (tarea) => API.post('/tareas', tarea);
-
 export const actualizarTarea = (id, tarea) => API.put(`/tareas/${id}`, tarea);
-
 export const eliminarTarea = (id) => API.delete(`/tareas/${id}`);
