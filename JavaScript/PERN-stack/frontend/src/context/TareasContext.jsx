@@ -39,7 +39,7 @@ export function TareasProvider({ children }) {
             setLoading(true);
             setErrors(null);
             const res = await obtenerTarea(id);
-           
+
             return Array.isArray(res.data) ? res.data[0] : res.data;
         } catch (error) {
             console.log('Error al obtener tarea:', error);

@@ -26,10 +26,7 @@ export const listarTarea = async (req, res, next) => {
 
 export const crearTarea = async (req, res, next) => {
     const { titulo, descripcion } = req.body;
-
-
     try {
-
         const resultado = await pool.query('INSERT INTO tareas (titulo, descripcion, usuario_id) VALUES ($1, $2, $3) RETURNING *', [titulo, descripcion, req.usuarioId]);
         res.json(resultado.rows[0]);
         console.log(resultado.rows[0]);
@@ -41,8 +38,6 @@ export const crearTarea = async (req, res, next) => {
         console.log(error);
         next(error);
     }
-
-
 }
 
 export const actualizarTarea = async (req, res, next) => {

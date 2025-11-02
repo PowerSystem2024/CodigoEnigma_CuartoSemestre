@@ -6,7 +6,6 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 
 const app = express();
-// Middlewares
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(cors(
@@ -22,7 +21,6 @@ app.get('/', (req, res) => res.json({ message: 'Bienvenido a mi proyecto' }));
 app.use('/api', tareasRoutes);
 app.use('/api', authRoutes);
 
-// manejando errores
 app.get('/test', (req, res) => {
     throw new Error('Error custom');
     res.send('test');
