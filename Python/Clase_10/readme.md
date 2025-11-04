@@ -4,31 +4,31 @@ Este repositorio resume los conceptos y comandos de la Clase 10. El objetivo es 
 Se detalla el proceso para clonar un repositorio, gestionar ramas y subir cambios.
 code
 Bash
-# 1. Crear un directorio para el proyecto y acceder a él
+### 1. Crear un directorio para el proyecto y acceder a él
 mkdir py-project
 cd py-project
 
-# 2. Clonar el repositorio base desde GitHub
+### 2. Clonar el repositorio base desde GitHub
 git clone https://github.com/ArielBetancud22/python-pip.git
 
-# 3. Ingresar a la carpeta del proyecto y abrirlo en VSCode
+### 3. Ingresar a la carpeta del proyecto y abrirlo en VSCode
 cd python-pip
 code .
 
-# 4. Listar las ramas (inicialmente solo 'main')
+### 4. Listar las ramas (inicialmente solo 'main')
 git branch
 
-# 5. Crear nuevas ramas para trabajar en funcionalidades sin afectar la principal
+### 5. Crear nuevas ramas para trabajar en funcionalidades sin afectar la principal
 git branch second
 git branch profe
 git branch ariel22
 
-# 6. Realizar cambios, añadirlos y confirmarlos con un commit
+### 6. Realizar cambios, añadirlos y confirmarlos con un commit
 git status
 git add .
 git commit -m "Mi primer archivo"
 
-# 7. Subir los cambios al repositorio remoto
+### 7. Subir los cambios al repositorio remoto
 git push origin main
 2. Solución al Problema de Autenticación en GitHub: Personal Access Token (PAT)
 Desde agosto de 2021, GitHub ya no acepta la contraseña de la cuenta para autenticar operaciones de Git en la terminal. En su lugar, se debe usar un Token de Acceso Personal (PAT).
@@ -49,42 +49,42 @@ Cuando la terminal te pida la contraseña, pega el Access Token que acabas de ge
 Los entornos virtuales son fundamentales para aislar las dependencias de cada proyecto, evitando conflictos entre las versiones de las librerías.
 code
 Bash
-# 1. Instalar el paquete para crear entornos virtuales (si no está disponible)
+### 1. Instalar el paquete para crear entornos virtuales (si no está disponible)
 sudo apt install -y python3-venv
 
-# 2. Crear un entorno virtual. 'env' es el nombre de la carpeta que lo contendrá.
+### 2. Crear un entorno virtual. 'env' es el nombre de la carpeta que lo contendrá.
 python3 -m venv env
 
-# 3. Activar el entorno virtual. La terminal mostrará (env) al principio.
+### 3. Activar el entorno virtual. La terminal mostrará (env) al principio.
 source env/bin/activate
 
-# 4. Para desactivar el entorno y volver al sistema global
+### 4. Para desactivar el entorno y volver al sistema global
 deactivate
 4. Manejo de Dependencias con pip
 Una vez activado el entorno virtual, los paquetes se instalan de forma aislada.
 code
 Bash
-# Verificar la ubicación de Python y Pip dentro del entorno virtual
+## Verificar la ubicación de Python y Pip dentro del entorno virtual
 which python3
 which pip3
-# Ambas rutas apuntarán a la carpeta 'env/bin/'
+### Ambas rutas apuntarán a la carpeta 'env/bin/'
 
-# Instalar la última versión de una librería (ej. Matplotlib)
+### Instalar la última versión de una librería (ej. Matplotlib)
 pip3 install matplotlib
 
-# Instalar una versión específica de una librería
+### Instalar una versión específica de una librería
 pip3 install matplotlib==3.5.0
 
-# Listar los paquetes instalados en el entorno virtual activo
+### Listar los paquetes instalados en el entorno virtual activo
 pip3 freeze
 Buenas Prácticas: requirements.txt
 Para que otros desarrolladores (o tú mismo en otro equipo) puedan replicar el entorno, se utiliza un archivo requirements.txt.
 code
 Bash
-# Generar el archivo con la lista de dependencias y sus versiones
+### Generar el archivo con la lista de dependencias y sus versiones
 pip3 freeze > requirements.txt
 
-# Para instalar todas las dependencias listadas en el archivo en un nuevo entorno
+### Para instalar todas las dependencias listadas en el archivo en un nuevo entorno
 pip install -r requirements.txt
 Resumen de Comandos Clave
 git clone <url>: Descarga un repositorio.
