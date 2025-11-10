@@ -1,0 +1,18 @@
+# Ignore Python virtual environments
+Python/**/venv/
+
+# IntelliJ / IDEA project files
+**/.idea/
+
+# Maven / Java build output
+**/target/
+
+# Node modules
+**/node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
